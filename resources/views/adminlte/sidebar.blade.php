@@ -14,7 +14,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -32,12 +32,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
+            <li class="nav-item">
+                            <a href="{{url('home')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Home Amira</p>
+                            </a>
+                        </li>
               <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -547,6 +547,19 @@
               <p>Informational</p>
             </a>
           </li>
+          <li class="nav-item">
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex"></div>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                        class="nav-link">
+                        <!-- <i class="nav-icon fas fa-portal-exit"></i> -->
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>{{ __('Logout') }}</p>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
