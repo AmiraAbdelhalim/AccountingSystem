@@ -21,6 +21,7 @@
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1 class="m-0 text-dark"> @yield('section_title')</h1>
+                            
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
@@ -43,9 +44,9 @@
         <!-- /.content-wrapper -->
 
         <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
+        <!-- <aside class="control-sidebar control-sidebar-dark"> -->
             <!-- Control sidebar content goes here -->
-        </aside>
+        <!-- </aside> -->
         <!-- /.control-sidebar -->
         <!-- Main Footer -->
 <footer class="main-footer">
